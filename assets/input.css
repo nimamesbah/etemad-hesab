@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+    --color-logoBg: #fdf3e9;
+    --color-darkH: #050812;
+}
+
+@font-face {
+    font-family: elham, sans-serif;
+    src: url(/assets/fonts/B_Elham_0.ttf) format(truetype);
+}
