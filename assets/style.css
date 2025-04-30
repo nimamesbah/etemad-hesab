@@ -1,3 +1,13 @@
 #header {
     background: linear-gradient(50deg, #fdf3e9 30%, #050812);
 }
+
+body {
+    background: url(/assets/images/mainBg.jpg) no-repeat;
+    background-size: cover;
+}
+
+#firstText {
+    background: url(/assets/images/cardBg.jpg) no-repeat;
+    background-size: cover;
+}
