@@ -11,3 +11,20 @@ body {
     background: url(/assets/images/cardBg.jpg) no-repeat;
     background-size: cover;
 }
+
+#sorat {
+    background: url(/assets/images/soraat.jpg) no-repeat bottom;
+    background-size: cover;
+}
+
+#deghat {
+    background: url(/assets/images/deghat.jpg) no-repeat left;
+    background-size: cover;
+}
+
+#mohasebe {
+    background: url(/assets/images/mohasebat.jpg) no-repeat;
+    background-size: cover;
+}
+
+#contacts {}
