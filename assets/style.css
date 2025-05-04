@@ -28,3 +28,7 @@ body {
 }
 
 #contacts {}
+
+footer {
+    background: linear-gradient(230deg, #fdf3e9 50%, #050812);
+}

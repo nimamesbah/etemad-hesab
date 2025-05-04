@@ -186,17 +186,20 @@
   .h-11 {
     height: calc(var(--spacing) * 11);
   }
-  .h-20 {
-    height: calc(var(--spacing) * 20);
-  }
   .h-\[289px\] {
     height: 289px;
+  }
+  .h-\[300px\] {
+    height: 300px;
   }
   .h-full {
     height: 100%;
   }
   .h-max {
     height: max-content;
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
   }
   .w-11 {
     width: calc(var(--spacing) * 11);
@@ -258,8 +261,17 @@
   .gap-7 {
     gap: calc(var(--spacing) * 7);
   }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
+  .gap-14 {
+    gap: calc(var(--spacing) * 14);
+  }
   .gap-\[3\%\] {
     gap: 3%;
+  }
+  .gap-y-5 {
+    row-gap: calc(var(--spacing) * 5);
   }
   .gap-y-6 {
     row-gap: calc(var(--spacing) * 6);
@@ -269,6 +281,9 @@
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
@@ -282,6 +297,9 @@
   }
   .bg-bigBox {
     background-color: var(--color-bigBox);
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
   }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
@@ -298,12 +316,18 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
   .text-center {
     text-align: center;
   }
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-\[10px\] {
+    font-size: 10px;
   }
   .text-logoBg {
     color: var(--color-logoBg);
@@ -327,6 +351,11 @@
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
+  .\38 00\:hidden {
+    @media (width >= 800px) {
+      display: none;
+    }
+  }
   .sm\:flex {
     @media (width >= 40rem) {
       display: flex;
@@ -340,6 +369,11 @@
   .sm\:w-14 {
     @media (width >= 40rem) {
       width: calc(var(--spacing) * 14);
+    }
+  }
+  .sm\:w-64 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 64);
     }
   }
   .sm\:min-w-\[20\%\] {
