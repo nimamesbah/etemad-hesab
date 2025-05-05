@@ -60,9 +60,10 @@
                     </div>
                 </div>
             </div>
-            <div id="contacts" class="w-full rounded-2xl h-max gap-8 py-4 bg-bigBox flex flex-col  flex-wrap items-center">
-                <h1>راه های ارتباطی ما</h1>
+            <div id="contacts" class="w-full border rounded-2xl h-max gap-8 py-4 bg-bigBox flex flex-col  flex-wrap items-center">
+                <h1 class="text-2xl">راه های ارتباطی ما!</h1>
                 <div class="flex justify-center w-[90%] items-center flex-wrap gap-14 ">
+                    <!-- start MOBILE -->
                     <a href="mailto:etemadhesab20@gmail.com" class="bg-4Box rounded-full w-max p-3  800:hidden">
                         <img class="w-10 " src="/assets/images/email-svgrepo-com.svg" alt="">
                     </a>
@@ -78,16 +79,51 @@
                     <a href="https://wa.me/989908525695" class="bg-4Box rounded-full w-max p-3 800:hidden">
                         <img class="w-10" src="/assets/images/whatsapp-color-svgrepo-com.svg" alt="">
                     </a>
+                    <!-- end mobile -->
+                    <!-- desktop -->
+                     <div id="phone" onclick="phoneHandle()" class="bg-4Box rounded-full transition-all ease-in-out w-14 cursor-pointer hover:bg-bigBox p-3 max-800:hidden duration-300 active:scale-90 flex items-center gap-2">
+                        <img class="w-10 " src="/assets/images/phone-svgrepo-com(2).svg" alt="">
+                        <h1 class=" text-2xl hidden">09908525695</h1>
+                     </div>
+                     <div id="email" onclick="emailHandle()" class="bg-4Box rounded-full transition-all ease-in-out w-14 cursor-pointer hover:bg-bigBox p-3 max-800:hidden duration-300 active:scale-90 flex items-center gap-2">
+                        <img class="w-10 " src="/assets/images/email-svgrepo-com.svg" alt="">
+                        <h1 class=" text-xl hidden">etemadhesab20@gmail.com</h1>
+                     </div>
+                     <div id="insta" onclick="instaHandle()" class="bg-4Box rounded-full transition-all ease-in-out w-14 cursor-pointer hover:bg-bigBox p-3 max-800:hidden duration-300 active:scale-90 flex items-center gap-2">
+                        <img class="w-10 " src="/assets/images/instagram-1-svgrepo-com.svg" alt="">
+                        <h1 class=" text-xl hidden">etemdhesab</h1>
+                     </div>
+                     <a href="https://t.me/+989908525695" class="bg-4Box rounded-full w-max p-3 max-800:hidden hover:bg-bigBox duration-300">
+                        <img class="w-8" src="/assets/images/telegram-svgrepo-com(1).svg" alt="">
+                    </a>
+                    <a href="https://wa.me/989908525695" class="bg-4Box rounded-full w-max p-3 max-800:hidden hover:bg-bigBox duration-300">
+                        <img class="w-8" src="/assets/images/whatsapp-color-svgrepo-com.svg" alt="">
+                    </a>
+
+
+                    <!-- end desktop -->
 
                 </div>
 
 
             </div>
-            <div id="4box" class="flex h-max gap-[3%] w-full justify-center flex-wrap content-center gap-y-6  ">
-                <div class="w-[252px] h-[289px] md:h-[389px] bg-4Box rounded-2xl flex flex-col gap-4 px-3.5 py-2.5 justify-between items-center"></div>
-                <div class="w-[252px] h-[289px] md:h-[389px] bg-4Box rounded-2xl flex flex-col gap-4 px-3.5 py-2.5 justify-between items-center"></div>
-                <div class="w-[252px] h-[289px] md:h-[389px] bg-4Box rounded-2xl flex flex-col gap-4 px-3.5 py-2.5 justify-between items-center"></div>
-                <div class="w-[252px] h-[289px] md:h-[389px] bg-4Box rounded-2xl flex flex-col gap-4 px-3.5 py-2.5 justify-between items-center"></div>
+            <div id="4box" class="flex h-max gap-[3%] w-full justify-center flex-wrap content-center gap-y-6 text-white text-center ">
+                <div class="w-[252px] h-[289px] md:h-[389px] bg-4Box rounded-2xl flex flex-col gap-14 px-3.5 py-2.5 justify-center  items-center">
+                    <h1 class="text-5xl">خدمات</h1>
+                    <p class="text-xl">تیم ما اماده هست تا خدمات کاربردی را که باعث بیشرفت کسب و کار شما میشود را به شما ارایه بدهد و شمارا در رسیدن به اهدافتان همراهی کند.</p>
+                    <div class="w-full rounded-3xl bg-btnBox h-max py-3 duration-200 hover:bg-gray-700 cursor-pointer">
+                        <p>لیست تمامی خدمات ما</p>
+                    </div>
+                </div>
+                <div class="w-[252px] h-[289px] md:h-[389px] bg-4Box rounded-2xl flex flex-col gap-14 px-3.5 py-2.5 justify-center  items-center">
+
+                </div>
+                <div class="w-[252px] h-[289px] md:h-[389px] bg-4Box rounded-2xl flex flex-col gap-14 px-3.5 py-2.5 justify-center  items-center">
+
+                </div>
+                <div class="w-[252px] h-[289px] md:h-[389px] bg-4Box rounded-2xl flex flex-col gap-14 px-3.5 py-2.5 justify-center  items-center">
+
+                </div>
 
             </div>
             <div id="whyUs" class="">
@@ -97,7 +133,7 @@
       <footer class="w-full h-[300px] ">
         <div id="containerF" class="w-[90%]  mx-auto flex flex-col justify-between items-center h-full">
             <div id="items" class="flex justify-between flex-wrap items-center gap-y-5 underline w-full">
-                <img class="" src="/assets/images/logo.jpg" width="100px" alt="">
+                <img class="" src="/assets/images/logo.jpg" width="100px"  alt="">
                 <div class="">
                     <p>خدمات ما</p>
                     <p>مشاوره رایگان</p>
