@@ -15,10 +15,9 @@
             <nav id="menuBar" class="sm:flex justify-between items-center w-max gap-5 hidden">
                 <a href="/index.html" class="text-logoBg">خانه</a>
                 <a href="" class="text-logoBg">خدمات</a>
-                <a href="" class="text-logoBg">تماس با ما</a>
-                <a href="" class="text-logoBg">درباره ما</a>
+                <a href="/about_me.html" class="text-logoBg">درباره ما</a>
             </nav>
-            <svg class="block sm:hidden" id="hamburger" width="35px" height="35px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg class="block sm:hidden cursor-pointer duration-300" onclick="hamburgerHandle()" id="hamburger" width="35px" height="35px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>Menu</title>
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Menu">
@@ -42,6 +41,11 @@
         </div>
 
      </header>
+     <div id="menuHam" class="w-full h-0 overflow-y-hidden gap-3.5 bg-gray-700  px-6 rounded-b-2xl flex duration-200 sm:hidden">
+        <a href="/index.html" class="text-logoBg">خانه</a>
+                <a href="" class="text-logoBg">خدمات</a>
+                <a href="/about_me.html" class="text-logoBg">درباره ما</a>
+     </div>
      <!-- header end -->
       <section id="containerB" class="flex flex-col justify-between items-center w-[90%] mx-auto h-max py-3 gap-6">
             <div id="firstText" class="w-full rounded-2xl ">
@@ -179,6 +183,7 @@
                 
             </div>
       </section>
+      <!-- footer -->
       <footer class="w-full h-[300px] ">
         <div id="containerF" class="w-[90%]  mx-auto flex flex-col justify-between items-center h-full">
             <div id="items" class="flex justify-between flex-wrap items-center gap-y-5 underline w-full">
@@ -197,5 +202,6 @@
 
         </div>
       </footer>
+      <!-- footer end -->
 </body>
 </html>

@@ -32,3 +32,8 @@ body {
 footer {
     background: linear-gradient(230deg, #fdf3e9 50%, #050812);
 }
+
+article>p:not(:first-child) {
+    display: inline-block;
+    margin-top: 40px;
+}
