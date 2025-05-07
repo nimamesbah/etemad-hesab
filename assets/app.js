@@ -3,6 +3,7 @@ const email = document.getElementById("email")
 const insta = document.getElementById("insta")
 const hamburger = document.getElementById("hamburger")
 const menuHam = document.getElementById("menuHam")
+const contacts = document.getElementById("contacts")
 
 
 function phoneHandle() {
@@ -43,5 +44,13 @@ function scrollFunc() {
         menuHam.classList.remove("h-12", "py-3")
         hamburger.classList.remove("rotate-90", "animate-pulse")
     }
+}
+
+function goToContacts() {
+    window.scrollTo({
+        top: contacts.offsetTop - 200
+    })
+    contacts.classList.add("animate-pulse")
+    setTimeout(() => contacts.classList.remove("animate-pulse"), 4000)
 }
 window.addEventListener("scroll", scrollFunc)
