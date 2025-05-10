@@ -4,6 +4,8 @@ const insta = document.getElementById("insta")
 const hamburger = document.getElementById("hamburger")
 const menuHam = document.getElementById("menuHam")
 const contacts = document.getElementById("contacts")
+const loading = document.getElementById("loading")
+const firstText = document.getElementById("firstText")
 
 
 function phoneHandle() {
@@ -53,4 +55,46 @@ function goToContacts() {
     contacts.classList.add("animate-pulse")
     setTimeout(() => contacts.classList.remove("animate-pulse"), 4000)
 }
+
+function loadingHandle() {
+    setTimeout(() => {
+        loading.classList.remove("opacity-100")
+        loading.classList.add("opacity-0")
+    }, 2000)
+    setTimeout(() => {
+        loading.classList.remove("flex")
+        loading.classList.add("hidden")
+        document.documentElement.style.overflow = ''
+
+    }, 2300)
+    setTimeout(() => {
+        firstText.classList.remove("brightness-0")
+        contacts.classList.remove("brightness-0")
+    }, 2300)
+}
+
+function boxHandle() {
+    const dives = document.querySelectorAll("#boxes > div")
+    if (window.screen.width < 800) {
+
+        for (const div of dives) {
+            if (window.scrollY > div.offsetTop - 200 && window.scrollY < div.offsetTop + 200) {
+                if (div.classList.contains("max-800:translate-x-[500px]"))
+                    div.classList.remove("max-800:translate-x-[500px]")
+                else
+                    div.classList.remove("max-800:translate-x-[-500px]")
+
+            }
+
+
+        }
+    }
+
+
+}
+
+loadingHandle()
+document.documentElement.style.overflow = 'hidden'
+
 window.addEventListener("scroll", scrollFunc)
+window.addEventListener("scroll", boxHandle)
