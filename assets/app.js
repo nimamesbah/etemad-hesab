@@ -8,6 +8,8 @@ const loading = document.getElementById("loading")
 const firstText = document.getElementById("firstText")
 
 
+
+
 function phoneHandle() {
     document.querySelector("#phone > h1").classList.remove("hidden")
 
@@ -50,27 +52,34 @@ function scrollFunc() {
 
 function goToContacts() {
     window.scrollTo({
-        top: contacts.offsetTop - 200
+        top: contacts.offsetTop - 300
     })
     contacts.classList.add("animate-pulse")
     setTimeout(() => contacts.classList.remove("animate-pulse"), 4000)
 }
 
 function loadingHandle() {
-    setTimeout(() => {
-        loading.classList.remove("opacity-100")
-        loading.classList.add("opacity-0")
-    }, 2000)
-    setTimeout(() => {
-        loading.classList.remove("flex")
-        loading.classList.add("hidden")
-        document.documentElement.style.overflow = ''
+    // debugger
+    if (location.pathname === "/index.html" || location.pathname === "/etemad_hesab/index.html") {
 
-    }, 2300)
-    setTimeout(() => {
-        firstText.classList.remove("brightness-0")
-        contacts.classList.remove("brightness-0")
-    }, 2300)
+        setTimeout(() => {
+            loading.classList.remove("opacity-100")
+            loading.classList.add("opacity-0")
+        }, 2000)
+        setTimeout(() => {
+            loading.classList.remove("flex")
+            loading.classList.add("hidden")
+            document.body.style.overflow = ''
+            enableScroll()
+
+        }, 2300)
+        setTimeout(() => {
+            firstText.classList.remove("brightness-0")
+            contacts.classList.remove("brightness-0")
+        }, 2300)
+    } else
+        setTimeout(() => otherPage(), 100)
+
 }
 
 function boxHandle() {
@@ -93,8 +102,31 @@ function boxHandle() {
 
 }
 
+function otherPage() {
+    enableScroll()
+    document.body.style.overflow = "visible"
+
+}
+
 loadingHandle()
-document.documentElement.style.overflow = 'hidden'
+
+disableScroll()
+document.body.style.overflow = "hidden"
 
 window.addEventListener("scroll", scrollFunc)
 window.addEventListener("scroll", boxHandle)
+console.log("loc", location.pathname)
+
+function disableScroll() {
+    document.addEventListener('touchmove', preventDefault, {
+        passive: false
+    });
+}
+
+function enableScroll() {
+    document.removeEventListener('touchmove', preventDefault);
+}
+
+function preventDefault(e) {
+    e.preventDefault();
+}

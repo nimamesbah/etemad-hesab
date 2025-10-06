@@ -1,74 +1,106 @@
+@font-face {
+  font-family: "vazir";
+  src: url("/assets/fonts/Vazir.woff2") format("woff2"),
+    url("/assets/fonts/Vazir.woff") format("woff");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "vazir";
+  src: url("/assets/fonts/Vazir-Medium.woff2") format("woff2"),
+    url("/assets/fonts/Vazir-Medium.woff") format("woff");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "vazir";
+  src: url("/assets/fonts/Vazir-Bold.woff2") format("woff2"),
+    url("/assets/fonts/Vazir-Bold.woff") format("woff");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
 #header {
-    background: linear-gradient(50deg, #fdf3e9 30%, #050812);
+  background: linear-gradient(50deg, #fdf3e9 30%, #050812);
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    background: url(/assets/images/mainBg.jpg) no-repeat;
-    background-size: cover;
+  font-family: "Vazir", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background: url(/assets/images/mainBg.jpg) no-repeat;
+  background-size: cover;
 }
 
 #firstText {
-    background: url(/assets/images/cardBg.jpg) no-repeat;
-    background-size: cover;
+  background: url(/assets/images/cardBg.jpg) no-repeat;
+  background-size: cover;
 }
 
 #sorat {
-    background: url(/assets/images/soraat.jpg) no-repeat bottom;
-    background-size: cover;
+  background: url(/assets/images/soraat.jpg) no-repeat bottom;
+  background-size: cover;
 }
 
 #deghat {
-    background: url(/assets/images/deghat.jpg) no-repeat left;
-    background-size: cover;
+  background: url(/assets/images/deghat.jpg) no-repeat left;
+  background-size: cover;
 }
 
 #mohasebe {
-    background: url(/assets/images/mohasebat.jpg) no-repeat;
-    background-size: cover;
+  background: url(/assets/images/mohasebat.jpg) no-repeat;
+  background-size: cover;
 }
 
-#contacts {}
+#contacts {
+}
 
 footer {
-    background: linear-gradient(180deg, #fdf3e9 50%, #050812);
+  background: linear-gradient(180deg, #fdf3e9 50%, #050812);
 }
 
-article>p:not(:first-child) {
-    display: inline-block;
-    margin-top: 40px;
+article > p:not(:first-child) {
+  display: inline-block;
+  margin-top: 40px;
 }
 
-footer>a {
-    display: block;
+footer > a {
+  display: block;
+}
+p {
+  font-weight: 300;
 }
 
 .loader {
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #97362f;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #97362f;
 
-    -webkit-animation: spin 2s linear infinite;
-    /* Safari */
-    animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
 }
 
 /* Safari */
 @-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
 
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
