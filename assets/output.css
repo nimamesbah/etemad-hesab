@@ -185,6 +185,9 @@
   }
 }
 @layer utilities {
+  .visible {
+    visibility: visible;
+  }
   .absolute {
     position: absolute;
   }
@@ -390,9 +393,6 @@
   }
   .bg-btnBox {
     background-color: var(--color-btnBox);
-  }
-  .bg-gray-400 {
-    background-color: var(--color-gray-400);
   }
   .bg-gray-700 {
     background-color: var(--color-gray-700);
@@ -644,10 +644,6 @@
       line-height: var(--tw-leading, var(--text-lg--line-height));
     }
   }
-}
-@font-face {
-  font-family: elham, sans-serif;
-  src: url(/assets/fonts/B_Elham_0.ttf) format(truetype);
 }
 @property --tw-rotate-x {
   syntax: "*";
