@@ -59,8 +59,11 @@ function goToContacts() {
 }
 
 function loadingHandle() {
-    // debugger
-    if (location.pathname === "/index.html" || location.pathname === "/etemad_hesab/index.html") {
+
+    const path = location.pathname;
+
+
+    if (path === "/" || path.endsWith("/index.html") || path.includes("/etemad_hesab/")) {
 
         setTimeout(() => {
             loading.classList.remove("opacity-100")
@@ -71,15 +74,14 @@ function loadingHandle() {
             loading.classList.add("hidden")
             document.body.style.overflow = ''
             enableScroll()
-
         }, 2300)
         setTimeout(() => {
             firstText.classList.remove("brightness-0")
             contacts.classList.remove("brightness-0")
         }, 2300)
-    } else
+    } else {
         setTimeout(() => otherPage(), 100)
-
+    }
 }
 
 function boxHandle() {
@@ -118,13 +120,19 @@ window.addEventListener("scroll", boxHandle)
 console.log("loc", location.pathname)
 
 function disableScroll() {
+    // For Mobile
     document.addEventListener('touchmove', preventDefault, {
+        passive: false
+    });
+    // For Desktop (Mouse Wheel)
+    document.addEventListener('wheel', preventDefault, {
         passive: false
     });
 }
 
 function enableScroll() {
     document.removeEventListener('touchmove', preventDefault);
+    document.removeEventListener('wheel', preventDefault);
 }
 
 function preventDefault(e) {
